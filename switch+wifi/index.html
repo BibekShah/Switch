@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Switch</title>
+		<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+	</head>
+	<body>
+		<div ng-app="switchDemo">
+			<md-list ng-controller="SwitchDemoCtrl" ng-cloak>
+				<md-list-item ng-repeat="setting in settings">
+					<p>{{setting.name}}</p>
+					<p>{{setting.enabled}}</p>
+					<md-switch ng-click="showConfirm($event,setting)" aria-label="Disabled active switch" ng-model="test(setting)"></md-switch>
+				</md-list-item>
+			</md-list>
+		</div>
+		<script type="text/javascript" src="script.js"></script>
+	</body>
+</html>
