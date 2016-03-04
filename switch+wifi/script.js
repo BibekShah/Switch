@@ -8,8 +8,6 @@ angular.module('switchDemo', ['ngMaterial'])
 	   return setting.enabled;
 	}
 	$scope.showConfirm = function(ev,setting){
-		//confirmation only during off to on state
-		if(setting.enabled==false){
 			// Appending dialog to document.body to cover sidenav in docs app
 			var confirm = $mdDialog.confirm(ev)
 			    .title('Are you sure you want to change it?')
@@ -24,9 +22,5 @@ angular.module('switchDemo', ['ngMaterial'])
 			}, function(){
 					//do nothing
 			});
-		}
-		else{
-			setting.enabled=false;
-		}
 	};
 });

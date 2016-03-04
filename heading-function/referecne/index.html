@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+	<script>
+		function myFunction(idValue){
+			 var parentId = document.getElementById(idValue);
+			//Get the dom build (table) from the view page.
+		    // var manipulatedDOM= "";
+		    // var chiidId = document.getElementById("idName");
+		    // parentId.appendChild(manipulatedDOM);
+		    // $('#id1').load('dummy.html');
+		    // document.write(dummy.html);
+		    // alert("you clicked");
+		    // document.write("thank you");
+		    // var manipulatedDOM = window.load('dummy.html');
+		    // parentId.appendChild(manipulatedDOM);
+		    var dummyDiv = document.createElement("div");
+		    dummyDiv.innerHTML = '<object type="text/html" data="dummy.html" ></object>';
+		    parentId.appendChild(dummyDiv);
+		}
+	</script>
+	<div id="#id1" style="background-color: yellow; width: 500px ; height: 1000px; overflow: hidden;">
+		<p> Hello NEpal</p>
+	</div>
+		<div id="#id2" style="background-color: #ff0000; width: 500px ; height: 200px;">
+		<p>Thank yoU</p>
+	</div>
+	<p>Click the button to make a BUTTON ELEMENT</p>
+	<button onclick="myFunction('#id1')">Append On Above</button>
+	<button onclick="myFunction('#id2')">Append On Below</button>
+
+</body>
+</html>
+
